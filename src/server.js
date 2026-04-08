@@ -1,6 +1,7 @@
 const express = require('express');
-const authRoutes = require('./routes/authRoutes');
-const experienceRoutes = require('./routes/experienceRoutes');
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;

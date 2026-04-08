@@ -1,24 +1,47 @@
-# Sistem Pengalaman API
+# Backend Dasar - Manajemen Informasi Pengalaman Tenaga Ahli
 
-Endpoint yang tersedia:
+Setup awal backend Node.js (Express) dengan Sequelize + MySQL, tanpa fitur bisnis.
 
-- `GET /api/pengalaman?tenaga_ahli_id=`
-- `POST /api/pengalaman`
-- `PUT /api/pengalaman/:id`
-- `DELETE /api/pengalaman/:id`
+## Struktur Folder (MVC)
 
-## Upload file referensi
+```text
+.
+├── server.js
+├── src
+│   ├── app.js
+│   ├── config
+│   │   ├── database.js
+│   │   └── testConnection.js
+│   ├── controllers
+│   ├── middlewares
+│   ├── models
+│   ├── routes
+│   ├── services
+│   └── utils
+├── .env.example
+└── package.json
+```
 
-Gunakan field multipart `referensi_file`.
+## Menjalankan Project
 
-Ketentuan:
-- Format file: PDF/DOC/DOCX
-- Ukuran maksimal: 5MB
-- File disimpan ke folder `/uploads`
+1. Install dependency:
+   - `npm install`
+2. Buat file environment dari contoh:
+   - `cp .env.example .env`
+3. Sesuaikan konfigurasi database MySQL di `.env`.
+4. Jalankan server:
+   - `npm run dev` atau `npm start`
 
-## Menjalankan
+## Test Koneksi Database
+
+Gunakan:
 
 ```bash
-npm install
-npm run start
+npm run db:test
+```
+
+Contoh jika berhasil:
+
+```text
+✅ Koneksi database berhasil.
 ```

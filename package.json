@@ -1,0 +1,14 @@
+{
+  "name": "sistem-pengalaman",
+  "version": "1.0.0",
+  "description": "API CRUD Tenaga Ahli dengan search, pagination, validasi, dan isolasi data per user",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "lint": "node --check src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

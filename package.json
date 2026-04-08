@@ -1,0 +1,14 @@
+{
+  "name": "sistem-pengalaman",
+  "version": "1.0.0",
+  "description": "API export PDF pengalaman per tenaga ahli",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "check": "node --check src/server.js && node --check src/routes/exportPdf.js && node --check src/data/mockData.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "pdfkit": "^0.15.0"
+  }
+}

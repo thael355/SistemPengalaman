@@ -1,16 +1,14 @@
 const express = require('express');
-const dashboardRouter = require('./routes/dashboard');
 
 const app = express();
 
-app.use('/api', dashboardRouter);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use((err, req, res, next) => {
-  // eslint-disable-next-line no-unused-vars
-  const _next = next;
-  return res.status(500).json({
-    message: 'Terjadi kesalahan pada server',
-    error: err.message,
+app.get('/health', (req, res) => {
+  return res.status(200).json({
+    status: 'ok',
+    message: 'Backend Manajemen Informasi Pengalaman Tenaga Ahli aktif.'
   });
 });
 
